@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Tank Problem</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-bottom: 30px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .label {
+      font-size: large;
+      font-weight: 600;
+      padding-bottom: 20px;
+    }
+
+    .form {
+      padding-top: 20px;
+      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button {
+      padding: 15px 25px;
+      background-color: rgb(46, 50, 50);
+      border: none !important;
+      border-radius: 20px;
+      color: antiquewhite;
+    }
+
+    .button:hover {
+      background-color: rgb(86, 91, 89);
+    }
+
+    .divContainer {
+      color: green;
+      font-size: large;
+      font-weight: 700;
+      padding: 20px;
+    }
+
+    .head {
+      color: rgb(97, 189, 255)
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="head">
+    Water Tank Problem
+  </h2>
+  <form id="arrayForm" class="form">
+    <div class="label">
+      Enter the list of numbers separated by commas:
+    </div>
+    <textarea id="arrayInput" name="arrayInput" onchange="getArray(false)" placeholder="0,4,0,0,0,6,0,6,4,0"></textarea>
+    <br>
+    <a href="#divContainer">
+      <button type="button" onclick="getArray(true)" class="button">Submit</button>
+    </a>
+  </form>
+  <div id="tableContainer" class="tableContainer"></div>
+  <div id="divContainer" class="divContainer"></div>
+  <div id="answerContainer"></div>
+  <script src="water-tank.js"></script>
+</body>
+
+</html>
